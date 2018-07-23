@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+
+    <TextView
+        android:id="@+id/textView77"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="63dp"
+        android:textAllCaps="true"
+        android:layout_centerVertical="true"
+        android:textSize="22sp"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="@color/colorRed"
+        android:text="REGISTER AS A HOST" />
+
+    <TextView
+        android:id="@+id/textView78"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView77"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/lato_regular"
+        android:letterSpacing="0.1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="My Healthy host platform encourages all those who love cooking and possess good culinary skills as well those who got extra space in their home and can offer paying guest services, to join as our selected host . Login to register as a host and create a profile, do not forget to create your customized service packages with pictures and be part of our host team.."
+        android:textColor="@color/dark_grey" />
+</RelativeLayout>

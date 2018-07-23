@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.clamour.foodevent">
+
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MICROPHONE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <permission
+        android:name="net.clamour.foodevent.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="net.clamour.foodevent.permission.MAPS_RECEIVE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/fav2"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/fav2"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".GuestProfile.GuestRegistration"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GuestProfile.GuestLogin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GuestHomeScreen.GuestHomeScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HostProfile.HostSplash"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GuestHomeScreen.GuestRiview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GuestHomeScreen.RecentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GuestProfile.GuestProfileScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".eventlist.GuestEventList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Splash_Screen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".EventDescriptionGuest"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".booking.GuestBooking"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".guestsearch.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".guestsearch.EventsNearMe"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".guestsearch.EventFilterScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".eventfilteroption.EventTypes"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".eventfilteroption.PriceperGuest"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".eventfilteroption.Cuisine"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".eventfilteroption.FoodPrefrences"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".eventfilteroption.Languges"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".eventfilteroption.Service"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hostdetails.HostDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".sidebar.TermsConditions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HostProfile.HostHomeScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hostsidebar.HostProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hostsidebar.RiviewRatingsHostList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".sidebar.ContactUs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".sidebar.AboutUs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".sidebar.MyHealthyExperience"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".sidebar.InboxGuest"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".sidebar.WishlistGuest"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".sidebar.GuestSwitchsplash"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hostsidebar.HostEvents"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hostsidebar.HealthyGuestList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tiffindelivery.TiffinDelivery_Eventlist"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tiffindelivery.TiffinDeliveryDescription"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".privateevent.Privateevent_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".privateevent.Privateevent_Description"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".catering.Catering_eventlist"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".catering.Catering_Evet_Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".sidebar.HowitWorks"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".booking.ConfirmBooking"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GuestProfile.Submit_Code_Screen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".guestsearch.MapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".eventcreation.CateringEventCreation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".eventcreation.PrivateEventCreation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".eventcreation.TiffinEventCreation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".eventcreation.SocialDinningEventCreation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hostsidebar.DrawerHostBaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GuestHomeScreen.CompleteHostProfileDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".booking.ThankyouPage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".guestsearch.SearchEventListDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".booking.StripeGateway"
+            android:screenOrientation="portrait" />
+        <activity android:name=".hostsidebar.Ordermanagement" />
+        <activity android:name=".booking.ViewMoreMenudetails" />
+        <activity android:name=".HostProfile.TermsHost" />
+        <activity android:name=".GuestHomeScreen.ViewMoreHostProfile" />
+        <activity android:name=".catering.ViewMoreDescription"></activity>
+    </application>
+
+</manifest>

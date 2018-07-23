@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "966207188921",
+    "project_id": "firebase-my-healthy-host"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:966207188921:android:5a82ea4e3a041286",
+        "android_client_info": {
+          "package_name": "net.clamour.foodevent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "966207188921-g8dq66ikdg9kvrhr8ld4bs011jq6th66.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "966207188921-eov3gchbad50nhqh34dkd6mmhf02n3f1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.clamour.foodevent",
+            "certificate_hash": "e06caaa219fa4607d1996f7db61e969c5b3015d2"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwywuJmNuhtVMv8lYEVMt6P8ZwF3Z4ThM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Healthy Host</string>
+    <string name="google_maps_key">AIzaSyD1xcuSLwaKUb3Ir6INOeK1loVJfXClA7g</string>
+    <string name="title_activity_catering_event_list">Catering_event_list</string>
+
+    <string name="facebook_app_id">244619659437974</string>
+    <string name="fb_login_protocol_scheme">fb244619659437974</string>
+
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+    <string name="BASEURL">http://emergingncr.com/my-healthy-host/api/</string>
+
+</resources>

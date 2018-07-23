@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context="net.clamour.foodevent.GuestProfile.GuestProfileScreen">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorRed"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/genral_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="113dp"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:text="* General Terms and Conditions and Privacy Policy" />
+
+                <TextView
+                    android:id="@+id/payment_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/genral_terms"
+                    android:layout_alignStart="@+id/genral_terms"
+                    android:layout_below="@+id/genral_terms"
+                    android:layout_marginTop="58dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:text="* Payment Terms and Cancellation Policy" />
+
+                <TextView
+                    android:id="@+id/user_agreement_guest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/payment_terms"
+                    android:layout_alignStart="@+id/payment_terms"
+                    android:layout_below="@+id/payment_terms"
+                    android:layout_marginTop="65dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:text="* Users Agreement for Guests" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

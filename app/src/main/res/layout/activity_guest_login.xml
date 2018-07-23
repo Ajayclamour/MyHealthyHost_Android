@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:padding="16dp"
+    android:orientation="vertical"
+   >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/logo_host"
+         />
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/email_address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <EditText
+            android:id="@+id/email_login"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/lato_regular"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/password_login"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/lato_regular"
+            android:hint="Password"
+            android:inputType="textPassword" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/signup_guest"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorRed"
+        android:text="Sign In"
+        android:textColor="#fff" />
+    <TextView
+        android:id="@+id/forgetpass_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="6dp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="right"
+        android:fontFamily="@font/lato_regular"
+        android:text="Forgot Password?"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/colorRed"
+        android:gravity="center_horizontal"
+        android:text="-------------------------OR-------------------------"
+        android:textSize="20sp" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/face_book_button"
+                android:drawableLeft="@drawable/facebook"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.2"
+                android:text="Facebook"
+                android:background="@drawable/border_facebook"
+                android:textAllCaps="false"
+                android:textColor="#3b5998"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="5dp"
+                android:paddingLeft="20dp"
+                />
+            <Button
+
+                android:drawableLeft="@drawable/gmail"
+                android:id="@+id/gmail_button"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:layout_height="40dp"
+                android:layout_weight="0.2"
+                android:background="@drawable/border_gmail"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="30dp"
+                android:text="Google"
+                android:textColor="@color/colorRed"
+                android:paddingLeft="20dp"
+
+                />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/signup_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:textSize="18sp"
+
+        android:textColor="@color/colorRed"
+        android:text="Don't have account? Sign up." />
+
+
+</LinearLayout>
+</ScrollView>

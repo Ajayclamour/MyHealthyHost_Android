@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+
+    <TextView
+        android:id="@+id/textView77"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="63dp"
+        android:textAllCaps="true"
+        android:layout_centerVertical="true"
+        android:textSize="22sp"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="@color/colorRed"
+        android:text="MY EXPERIENCE" />
+
+    <TextView
+        android:id="@+id/textView78"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView77"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/lato_regular"
+        android:letterSpacing="0.1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="After successful completion of service, Its time to share my healthy host experience through your online reviews on social media as well as on my healthy host platform."
+        android:textColor="@color/dark_grey" />
+</RelativeLayout>

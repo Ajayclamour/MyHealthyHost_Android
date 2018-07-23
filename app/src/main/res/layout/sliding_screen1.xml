@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+
+    <TextView
+        android:id="@+id/textView77"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="63dp"
+        android:textAllCaps="true"
+        android:textSize="25sp"
+        android:fontFamily="@font/lato_bold"
+        android:textColor="@color/colorRed"
+        android:text="How it Works" />
+
+    <TextView
+        android:id="@+id/textView78"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/dark_grey"
+        android:fontFamily="@font/lato_regular"
+        android:letterSpacing="0.1"
+        android:text="As we know the sharing economy (Peer to peer based business model) has become a new movement. From sharing cars to sharing of homes or even food is becoming common. My Health host is social dining and lodging (Paying Guest) platform provides opportunity to travelers, students and working professionals to dine and socialize with potential hosts. We suggest you to begin with registration as a guest, and then browse and search for potential hosts in the cities you are visiting or even in your home city. Social dining and lodging experience is fun, it is about meeting new people. Each dining and lodging experience is unique and features a customized package prepared by the host, select the services required of your choice and book accordingly through our online secured payment methods. You will receive confirmation message from potential host. You are advised to let your host aware if you have any dietary preferences of restrictions so that the host can be prepared." />
+</RelativeLayout>

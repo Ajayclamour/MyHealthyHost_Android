@@ -1,0 +1,104 @@
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardCornerRadius="0dp"
+    android:layout_marginBottom="10dp"
+    android:paddingStart="20dp"
+    android:paddingLeft="20dp"
+    android:background="#ffff"
+    android:paddingTop="20dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#ffff">
+
+
+        <ImageView
+            android:id="@+id/guest_image"
+            android:layout_width="100dp"
+            android:layout_height="110dp"
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/guest_name"
+            android:adjustViewBounds="true"
+            card_view:srcCompat="@drawable/user" />
+
+        <TextView
+            android:id="@+id/guest_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="52dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="29dp"
+            android:layout_toEndOf="@+id/guest_image"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/guest_image"
+            android:fontFamily="@font/lato_bold"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:text="Pooja Kumari" />
+
+        <TextView
+            android:id="@+id/rating_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/guest_name"
+            android:fontFamily="@font/lato_bold"
+            android:layout_alignStart="@+id/guest_name"
+            android:layout_below="@+id/guest_name"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/black"
+            android:text="31 january 2018 " />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/guest_comment"
+            android:layout_alignRight="@+id/guest_comment"
+            android:numStars="5"
+            android:scaleX="0.5"
+            android:isIndicator="true"
+            android:stepSize="0.1"
+            android:layout_marginRight="20dp"
+            android:scaleY="0.5"
+            android:layout_centerVertical="true" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/event_name"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignLeft="@+id/ratingBar"-->
+            <!--android:layout_alignStart="@+id/ratingBar"-->
+            <!--android:layout_below="@+id/ratingBar"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:fontFamily="@font/lato_bold"-->
+            <!--android:text="Amazing Food Events"-->
+
+            <!--android:textColor="@color/black" />-->
+
+        <TextView
+            android:id="@+id/guest_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/guest_image"
+            android:layout_marginTop="19dp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:fontFamily="@font/lato_regular"
+            android:text="We had lunch here a few times while on the island visiting family and friends. The servers here are just wonderful and have great memories it seems. We sat on the ocean front patio and enjoyed the view with our delicious wine and lunch. Must try!" />
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

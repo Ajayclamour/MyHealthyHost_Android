@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorRed"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2.0"
+        style="?attr/buttonBarStyle">
+
+        <Button
+            android:id="@+id/request_book"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:textAllCaps="true"
+            android:background="@color/colorRed"
+            android:textColor="#fff"
+            style="?attr/buttonBarButtonStyle"
+            android:text="Request To Book"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"/>
+        <Button
+            android:id="@+id/add_wishlist"
+            style="?attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:textSize="15sp"
+            android:textAllCaps="true"
+            android:background="@color/colorRed"
+            android:textColor="#fff"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Add to Favourites"/>
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/buttons"
+        android:layout_marginTop="57dp"
+        android:id="@+id/scrollView2">
+        <!--Scrollable content here-->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relative1"
+                android:layout_width="match_parent"
+                android:layout_height="900dp">
+
+                <ImageView
+                    android:id="@+id/event_background_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/image_background"
+                    />
+
+
+                <RelativeLayout
+                    android:id="@+id/relative2"
+                    android:layout_marginTop="200dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp">
+
+                    <TextView
+                        android:id="@+id/event_name_des"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginTop="35dp"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/lato_bold"
+                        android:textColor="@color/black"
+                        android:text="Parsian Evening with Gourmets" />
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="2dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="310sp"
+                        android:background="@color/colorRed" />
+
+                    <TextView
+                        android:id="@+id/event_address_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+
+                        android:layout_marginRight="200dp"
+                        android:layout_marginTop="325dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/lato_regular"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="canad"
+                        android:textColor="@color/black" />
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/textView25"-->
+                    <!--android:layout_width="70dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_alignBottom="@+id/view3"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:layout_marginLeft="50dp"-->
+                    <!--android:background="@drawable/rating"-->
+                    <!--/>-->
+
+                    <TextView
+                        android:id="@+id/price_perguest_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/imageView2"
+                        android:layout_marginLeft="240dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="hgjghj"
+                        android:textColor="@color/colorRed"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="240dp"
+                        android:layout_below="@+id/price_perguest_desc"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="per Nights"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:layout_marginTop="300dp"
+                        android:background="@drawable/ic_add_location_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView29"
+                        android:layout_alignStart="@+id/textView29"
+                        android:layout_below="@+id/textView36"
+                        android:layout_marginTop="80dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="ABOUT SERVICE"
+                        android:textColor="@color/green"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/textView28"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorRed" />
+
+
+                    <TextView
+                        android:id="@+id/textView29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView58"
+                        android:layout_alignStart="@+id/textView58"
+                        android:layout_below="@+id/view4"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Min to Max Nights:"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/no_guest_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/textView29"
+                        android:layout_alignBottom="@+id/textView29"
+                        android:layout_marginLeft="19dp"
+                        android:layout_marginStart="19dp"
+                        android:layout_toEndOf="@+id/view3"
+                        android:layout_toRightOf="@+id/view3"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="2 to 6 Guests"
+                        android:textColor="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView29"
+                        android:layout_alignStart="@+id/textView29"
+                        android:layout_below="@+id/textView29"
+                        android:layout_marginTop="28dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Experience:"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/Experience"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignBaseline="@+id/textView34"
+                        android:layout_alignBottom="@+id/textView34"
+                        android:layout_alignLeft="@+id/no_guest_desc"
+                        android:layout_alignStart="@+id/no_guest_desc"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Red Wine,White Wine"
+                        android:textColor="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/textView58"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView34"
+                        android:layout_marginTop="27dp"
+                        android:layout_marginLeft="30dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Type of place:"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/typeofplace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignBaseline="@+id/textView58"
+                        android:layout_alignBottom="@+id/textView58"
+                        android:layout_alignLeft="@+id/Experience"
+                        android:layout_alignStart="@+id/Experience"
+                        android:fontFamily="@font/lato_bold"
+                        android:text=""
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/textView69"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_below="@+id/typeofplace"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Date:"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/paydate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/typeofplace"
+                        android:layout_alignStart="@+id/typeofplace"
+                        android:layout_alignTop="@+id/textView69"
+                        android:fontFamily="@font/lato_bold"
+                        android:textColor="@color/black"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/textView71"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView69"
+                        android:layout_alignStart="@+id/textView69"
+                        android:layout_below="@+id/textView69"
+                        android:layout_marginTop="29dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Receiving Time:"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/recivingtime_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/paydate"
+                        android:layout_alignStart="@+id/paydate"
+                        android:layout_alignTop="@+id/textView71"
+                        android:fontFamily="@font/lato_bold"
+                        android:textColor="@color/black"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/textView79"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_alignLeft="@+id/textView71"
+                        android:layout_alignStart="@+id/textView71"
+                        android:layout_below="@+id/textView71"
+                        android:layout_marginTop="21dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Facilities:"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/facilities"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/textView79"
+                        android:layout_alignBottom="@+id/textView79"
+                        android:layout_alignLeft="@+id/recivingtime_desc"
+                        android:layout_alignStart="@+id/recivingtime_desc"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/lato_bold"
+                        android:maxLines="2"
+                        android:text="dsfdsfsdg"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/textView75"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView71"
+                        android:layout_alignStart="@+id/textView71"
+                        android:layout_below="@+id/textView79"
+                        android:layout_marginTop="21dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Instruction:"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/instructin_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/textView75"
+                        android:layout_alignBottom="@+id/textView75"
+                        android:layout_alignLeft="@+id/facilities"
+                        android:layout_alignStart="@+id/facilities"
+                        android:fontFamily="@font/lato_bold"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:text=""
+                        android:textColor="@color/black" />
+
+
+
+                    <TextView
+                        android:id="@+id/host_name_des"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/host_image"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginTop="15dp"
+                        android:text="Michale"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/host_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_above="@+id/price_perguest_desc"
+                        android:layout_alignLeft="@+id/event_address_desc"
+                        android:layout_alignStart="@+id/event_address_desc"
+                        android:layout_marginBottom="21dp"
+                        android:background="@drawable/user" />
+
+
+
+                    <TextView
+                        android:id="@+id/textView36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView29"
+                        android:layout_alignStart="@+id/textView29"
+                        android:layout_below="@+id/event_address_desc"
+                        android:layout_marginTop="27dp"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="DESCRIPTION"
+                        android:textColor="@color/green"
+                        android:textSize="20sp" />
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/textView36"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/colorRed" />
+
+                    <TextView
+                        android:id="@+id/event_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView36"
+                        android:layout_marginTop="27dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_marginLeft="30dp"
+                        android:maxLength="35"
+                        android:text="dffdf"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/viewmore_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/event_description"
+                        android:textColor="@color/colorRed"
+                        android:layout_marginLeft="260dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="view more" />
+
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

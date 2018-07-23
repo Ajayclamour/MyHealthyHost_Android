@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.clamour.foodevent.guestsearch.SearchActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorRed"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ededed">
+
+    <RelativeLayout
+        android:id="@+id/relative_serach"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorRed">
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#fff">
+
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="23dp"
+                android:layout_marginLeft="17dp"
+                android:letterSpacing="0.1"
+                android:fontFamily="@font/lato_regular"
+                android:textSize="15sp"
+                android:text="Search Host Near You..." />
+        </RelativeLayout>
+
+        <!--<TextView-->
+            <!--android:id="@+id/textView_search"-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginLeft="17dp"-->
+            <!--android:letterSpacing="0.1"-->
+            <!--android:fontFamily="@font/lato_regular"-->
+            <!--android:hint="Search Host Near You..."-->
+            <!--android:textSize="15sp"-->
+             <!--/>-->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@+id/textView"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#ffffff"
+            android:src="@drawable/ic_search_red_24dp" />
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_event"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/relative_serach"
+            android:background="#fff">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Browse Host Near Me"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:fontFamily="@font/lato_bold"
+             android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+
+                android:id="@+id/textView4" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_toEndOf="@+id/textView4"
+                android:layout_toRightOf="@+id/textView4"
+                android:src="@drawable/ic_near_me_black_24dp" />
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

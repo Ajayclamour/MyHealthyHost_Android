@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.clamour.foodevent.booking.ThankyouPage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="21dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/lato_bold"
+            android:text="Thank you,your Booking Has Been Done." />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/textView24"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/border_gmail"
+            android:layout_marginTop="44dp"
+            android:id="@+id/relativeLayout6">
+
+            <TextView
+                android:id="@+id/textView60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="14dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="25dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/lato_regular"
+                android:text="Your OrderNo Is" />
+
+            <TextView
+                android:id="@+id/order_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignBottom="@+id/textView60"
+                android:layout_marginLeft="49dp"
+                android:layout_marginStart="49dp"
+                android:layout_toEndOf="@+id/textView60"
+                android:layout_toRightOf="@+id/textView60"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/black"
+                android:text="12345678900000"
+                 />
+
+            <TextView
+                android:id="@+id/textView67"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView60"
+                android:layout_alignStart="@+id/textView60"
+                android:layout_below="@+id/textView60"
+                android:layout_marginTop="16dp"
+
+                android:textSize="15sp"
+
+                android:fontFamily="@font/lato_regular"
+                android:text="Hosted By" />
+
+            <TextView
+                android:id="@+id/textView68"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView67"
+                android:layout_alignStart="@+id/textView67"
+                android:layout_alignTop="@+id/textView67"
+                android:layout_marginTop="37dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/lato_regular"
+                android:text="Title" />
+
+            <TextView
+                android:id="@+id/textView70"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView68"
+                android:layout_alignStart="@+id/textView68"
+                android:layout_below="@+id/textView68"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/lato_regular"
+                android:text="No of Guests" />
+
+            <TextView
+                android:id="@+id/textView72"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView70"
+                android:layout_alignStart="@+id/textView70"
+                android:layout_below="@+id/textView70"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/lato_regular"
+                android:text="Booking Date" />
+
+            <TextView
+                android:id="@+id/textView74"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView72"
+                android:layout_alignStart="@+id/textView72"
+                android:layout_below="@+id/textView72"
+                android:layout_marginTop="19dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="Price/Guest"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/hostedby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/order_no"
+                android:layout_alignStart="@+id/order_no"
+                android:layout_alignTop="@+id/textView67"
+                android:fontFamily="@font/lato_bold"
+                android:textColor="@color/black"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/hostedby"
+                android:layout_alignStart="@+id/hostedby"
+                android:layout_alignTop="@+id/textView68"
+                android:fontFamily="@font/lato_bold"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/noofguest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView72"
+                android:layout_alignLeft="@+id/title"
+                android:layout_alignStart="@+id/title"
+                android:fontFamily="@font/lato_bold"
+                android:text="TextView"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/bookingdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView72"
+                android:layout_alignLeft="@+id/noofguest"
+                android:layout_alignStart="@+id/noofguest"
+                android:fontFamily="@font/lato_bold"
+                android:text="TextView"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/priceguest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView74"
+                android:layout_alignLeft="@+id/bookingdate"
+                android:layout_alignStart="@+id/bookingdate"
+                android:fontFamily="@font/lato_bold"
+                android:text="TextView"
+                android:textColor="@color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorRed"
+                android:layout_below="@+id/priceguest"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="60dp"
+                android:id="@+id/view14" />
+
+            <TextView
+                android:id="@+id/textView81"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView74"
+                android:layout_alignStart="@+id/textView74"
+                android:layout_below="@+id/view14"
+                android:layout_marginTop="14dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/lato_regular"
+                android:text="Total Payable" />
+
+            <TextView
+                android:id="@+id/totalfare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/priceguest"
+                android:layout_alignStart="@+id/priceguest"
+                android:layout_alignTop="@+id/textView81"
+                android:fontFamily="@font/lato_bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/textView76"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView81"
+                android:layout_alignLeft="@+id/textView74"
+                android:layout_alignStart="@+id/textView74"
+                android:layout_marginBottom="18dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/lato_regular"
+                android:text="Booking Time" />
+
+            <TextView
+                android:id="@+id/bookingtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/priceguest"
+                android:layout_alignStart="@+id/priceguest"
+                android:layout_alignTop="@+id/textView76"
+                android:textColor="@color/black"
+                android:fontFamily="@font/lato_bold"
+                android:text="TextView" />
+
+            <!--<TextView-->
+                <!--android:id="@+id/textView67"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/order_no"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_marginTop="18dp"-->
+                <!--android:text="Thank you for Connecting  with My Healthy Host\n Enjoy the Food Experience with Our Host and Make\n Others Connected with Us.  " />-->
+           </RelativeLayout>
+
+        <Button
+            android:id="@+id/continue_shopping"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout6"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorRed"
+            android:textColor="@color/white"
+            android:text="CONTINUE" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="24dp"
+            android:textColor="@color/colorRed"
+            android:fontFamily="@font/lato_regular"
+            android:text="Note: Please check your Registered EmailId for all Details" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

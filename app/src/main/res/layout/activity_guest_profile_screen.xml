@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context="net.clamour.foodevent.GuestProfile.GuestProfileScreen">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorRed"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:descendantFocusability="beforeDescendants"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="2100dp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/person_profile_image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/user"
+                     />
+
+                <Button
+                    android:id="@+id/capture_button"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/person_profile_image"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="32dp"
+                    android:textColor="#fff"
+                    android:fontFamily="@font/lato_bold"
+                    android:background="@drawable/profile_button_border"
+                    android:text="Change Profile Picture" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/capture_button"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="33dp"
+                    android:textColor="#000"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Personal Information"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="My Healthy Host is all about relationship introduce yourself to help other Healthy Host to get to Know you." />
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/relative1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="60dp"-->
+
+                <!--android:layout_below="@+id/textView3"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_marginTop="37dp">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/profile_title"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:layout_marginStart="16dp"-->
+                <!--android:fontFamily="@font/lato_regular"-->
+                <!--android:text="Title*" />-->
+
+                <!--<Spinner-->
+                <!--android:id="@+id/spinner_title"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true" />-->
+
+                <!--<EditText-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:focusableInTouchMode="false"-->
+                <!--android:focusable="false"-->
+                <!--android:fontFamily="@font/lato_regular"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--/>-->
+
+
+                <!--</RelativeLayout>-->
+                <RelativeLayout
+                    android:id="@+id/relative2"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/textView3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <EditText
+                        android:id="@+id/firstname_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:inputType="textPersonName"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="First Name*" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative3"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/relative2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="27dp">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="16dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_marginStart="16dp"
+                        android:text="Last Name*" />
+
+                    <EditText
+                        android:id="@+id/lastname_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:inputType="textPersonName"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+
+                <Spinner
+                    android:id="@+id/gender_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/relative3"
+                    android:layout_marginTop="37dp" />
+                <LinearLayout
+                    android:id="@+id/linear1"
+                    android:layout_below="@+id/gender_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:orientation="horizontal"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/dark_grey">
+                </LinearLayout>
+                <Spinner
+                    android:id="@+id/age_grp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="20dp"
+
+
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/linear1"
+                    android:layout_marginTop="47dp" />
+                <LinearLayout
+                    android:id="@+id/linear2"
+                    android:layout_below="@+id/age_grp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:orientation="horizontal"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/dark_grey">
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/service_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/linear2"
+                    android:layout_marginTop="44dp" />
+                <LinearLayout
+                    android:id="@+id/linear3"
+                    android:layout_below="@+id/service_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/dark_grey">
+                </LinearLayout>
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/relative4"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="60dp"-->
+
+                <!--android:layout_below="@+id/linear3"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_marginTop="27dp">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/textView8"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:layout_marginStart="16dp"-->
+                <!--android:fontFamily="@font/lato_regular"-->
+                <!--android:text="Date of Birth*" />-->
+
+                <!--<EditText-->
+                <!--android:id="@+id/dateofbirth_profile"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:fontFamily="@font/lato_regular"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_alignParentStart="true" />-->
+                <!--</RelativeLayout>-->
+                <RelativeLayout
+                    android:id="@+id/relative5"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+
+                    android:layout_below="@+id/linear3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="27dp">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Email*" />
+
+                    <EditText
+                        android:id="@+id/email_host"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:inputType="textEmailAddress"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative6"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+
+                    android:layout_below="@+id/relative5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="27dp">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Alternate Email*" />
+
+                    <EditText
+                        android:id="@+id/alternate_emailhost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:inputType="textEmailAddress"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/relative7"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+
+                    android:layout_below="@+id/relative6"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="27dp">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Phone Number*" />
+
+                    <EditText
+                        android:id="@+id/phone_numberhost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="80dp"
+                        android:inputType="number"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_alignParentStart="true" />
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView12"
+                        android:layout_alignStart="@+id/textView12"
+                        android:layout_below="@+id/textView12"
+                        android:ems="10"
+                        android:layout_marginTop="4dp"
+                        android:inputType="phone"
+                        />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative8"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+
+                    android:layout_below="@+id/relative7"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="27dp">
+
+                    <TextView
+                        android:id="@+id/textView_gustph"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Alternate Phone*" />
+
+                    <EditText
+                        android:id="@+id/alternate_phonehost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="80dp"
+                        android:inputType="number"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_alignParentStart="true" />
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp_alternate"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textView_gustph"
+                        android:layout_alignStart="@+id/textView_gustph"
+                        android:layout_alignTop="@+id/alternate_phonehost"
+                        android:ems="10"
+                        android:layout_marginTop="4dp"
+                         />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/address2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address:"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="20sp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/lato_bold"
+                    android:layout_below="@+id/relative8"/>
+
+                <RelativeLayout
+                    android:id="@+id/relative_address1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/address2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="27dp">
+
+                    <TextView
+                        android:id="@+id/textView_fulladd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Unit No*" />
+
+                    <EditText
+                        android:id="@+id/unitno_guest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:inputType="text"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_address2"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+
+                    android:layout_below="@+id/relative_address1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="27dp">
+
+                    <TextView
+                        android:id="@+id/textView_numb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Street Address*" />
+
+                    <EditText
+                        android:id="@+id/streetaddress_guest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:inputType="text"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/relative_address6"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/relative_address2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="27dp">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Country*" />
+
+                    <Spinner
+                        android:id="@+id/country_spinnerguest"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textView13"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+
+                        android:textSize="20dp" />
+                    <LinearLayout
+                        android:id="@+id/linear9"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/country_spinnerguest"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/dark_grey"
+                        android:orientation="horizontal"></LinearLayout>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/relative_address8"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/relative_address6"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="27dp">
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="State/Province*" />
+
+                    <Spinner
+                        android:id="@+id/state_spinnerguest"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textView15"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textSize="20dp" />
+                    <LinearLayout
+                        android:id="@+id/linear19"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/state_spinnerguest"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/dark_grey"
+                        android:orientation="horizontal"></LinearLayout>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/relative_address4"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+
+                    android:layout_below="@+id/relative_address8"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="27dp">
+
+                    <TextView
+                        android:id="@+id/textView_cityguest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="City*" />
+
+                    <EditText
+                        android:id="@+id/city_guest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:inputType="text"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/relative_address7"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/relative_address4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="27dp">
+
+                    <TextView
+                        android:id="@+id/textView_zipguest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="ZIP/Postal Code*" />
+
+                    <EditText
+                        android:id="@+id/zip_guest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:inputType="number"
+                        android:fontFamily="@font/lato_regular"
+                        android:layout_alignParentStart="true" />
+                </RelativeLayout>
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/relative_address9"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="60dp"-->
+                <!--android:layout_marginTop="27dp"-->
+                <!--android:layout_below="@+id/relative_address8">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/textView_newpassguest"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:layout_marginStart="16dp"-->
+                <!--android:fontFamily="@font/lato_regular"-->
+                <!--android:text="New Password*" />-->
+
+                <!--<EditText-->
+                <!--android:id="@+id/new_password"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:fontFamily="@font/lato_regular"-->
+                <!--android:layout_alignParentStart="true" />-->
+
+
+                <!--</RelativeLayout>-->
+
+                <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="60dp"-->
+                <!--android:id="@+id/relative_address10"-->
+                <!--android:layout_marginTop="27dp"-->
+                <!--android:layout_below="@+id/relative_address9">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/textView10"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:layout_marginStart="16dp"-->
+                <!--android:fontFamily="@font/lato_regular"-->
+                <!--android:text="ReType Password*" />-->
+
+                <!--<EditText-->
+                <!--android:id="@+id/repeat_password"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:fontFamily="@font/lato_regular"-->
+                <!--android:layout_alignParentStart="true" />-->
+
+                <!--</RelativeLayout>-->
+
+
+                <TextView
+                    android:id="@+id/termstext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relative_address8"
+                    android:layout_marginTop="210dp"
+                    android:text="TERMS AND CONDITIONS"
+                    android:gravity="center"
+                    android:fontFamily="@font/lato_bold"
+                    android:textColor="@color/colorRed"
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/save_profile_host"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relative6"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="950dp"
+                    android:text="SAVE"
+                    android:textColor="@color/white"
+                    android:background="@color/colorRed"
+                    android:fontFamily="@font/lato_bold"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/address2"
+                    android:layout_alignStart="@+id/address2"
+                    android:layout_below="@+id/relative_address8"
+                    android:layout_marginTop="288dp"
+                    android:gravity="center"
+                    android:text="I Agree Terms and Conditions" />
+
+                <TextView
+                    android:id="@+id/textView45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/linear1"
+                    android:layout_alignStart="@+id/linear1"
+                    android:layout_below="@+id/relative3"
+                    android:layout_marginTop="14dp"
+                    android:text="Gender" />
+
+                <TextView
+                    android:id="@+id/textView46"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/linear1"
+                    android:layout_alignStart="@+id/linear1"
+                    android:layout_below="@+id/linear1"
+                    android:layout_marginTop="18dp"
+                    android:text="Age Group" />
+
+                <TextView
+                    android:id="@+id/textView49"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_alignLeft="@+id/linear2"
+                    android:layout_alignStart="@+id/linear2"
+                    android:layout_below="@+id/linear2"
+                    android:layout_marginTop="20dp"
+                    android:text="Cateogry" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/termstext"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#696969"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="click to view" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

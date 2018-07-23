@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.clamour.foodevent.sidebar.ContactUs">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        android:background="@color/colorRed">
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ededed">
+
+        <RelativeLayout
+            android:id="@+id/relativeimage"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="@drawable/contactus">
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/relativecontent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_below="@+id/relativeimage">
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:textSize="15sp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:text="My Health host is a social dining platform that connects communities and bring people together through excellent home dining experience"/>-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearaddress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:layout_below="@+id/relativecontent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_pin_drop_black_24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginLeft="20dp"
+                android:text="Address:7045, Edwards blvd., Suite 201 Mississauga ON L5S 1X2"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearemail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:layout_below="@+id/linearaddress"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_email_black_24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginLeft="20dp"
+                android:text="myhealthy@host.com"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearcall"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:layout_below="@+id/linearemail"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_phone_black_24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:layout_marginLeft="20dp"
+                android:text="Tel No. 1833-400-HOST (4678)"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.clamour.foodevent.sidebar.AboutUs">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorRed">
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1100dp"
+                android:background="@color/white"
+                >
+                <RelativeLayout
+                    android:id="@+id/relativeimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/contactus">
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/linear1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:background="@color/colorRed"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/relativeimage">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="ABOUT MYHEALTHY HOST" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@id/linear2"
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    android:layout_below="@+id/linear1"
+                    android:orientation="horizontal">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="10dp"
+
+    android:layout_marginTop="10dp"
+    android:textColor="@color/black"
+    android:fontFamily="@font/lato_regular"
+    android:scrollHorizontally="false"
+    android:text="My Health host is a social dining platform that connects communities and brings people together through excellent home dining experience. Here people can enjoy food of their taste and able to meet people of different culture. My Health host social dinning platform will provide opportunity for international travelers to connect with local people and get the unique and memorable cultural experience of home-dining anywhere around the world. 
+
+It will also provide an opportunity to professional working in metropolitan area to connect with local host for their daily meal requirements.
+
+Currently, Travelers and working professionals faces a tough challenge in finding healthy food. Prospective travelers visit multiple restaurants and try different options. In addition, working professional in metros faces challenge to meet daily food requirements.
+
+The goal of My Health host is to make healthy meals availability simple by connecting with those who can offer host and delivery services. My Health host is a perfect place for fulfilling the need of a sophisticated clientele, conscious of what to expect from a home restaurant. "/>
+
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/linear3"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                 android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorRed"
+                    android:layout_below="@+id/linear2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OUR MISSION"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/lato_bold"
+                        android:layout_gravity="center"
+                        />
+
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:id="@+id/linear4"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/linear3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+
+                        android:fontFamily="@font/lato_regular"
+                        android:textColor="@color/black"
+                        android:text="My Healthy host mission is simple, to build communities and bring people of various cultural background together on one platform by mean of home dining, and facilitate deeper cultural exchange. Our mission is to provide home cooked food to people who are not able to get home food. Also our mission is to encourage the host to provide good food to their guest."/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/linear5"
+                    android:layout_width="match_parent"
+                   android:gravity="center"
+                    android:background="@color/colorRed"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@+id/linear4"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OUR VISION"
+                        android:fontFamily="@font/lato_bold"
+                        android:layout_gravity="center"
+                       android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/linear6"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/linear5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/lato_regular"
+                        android:text="Integrate guests with my healthy host service providers in ecosystem and provide recommendations that are connected through the Continuum of My Healthy host ecosystem. Our vision is to provide My Healthy host services at the international level so that people can enjoy homemade food."/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
