@@ -1,4 +1,4 @@
-package net.clamour.foodevent.booking;
+package net.clamour.foodevent.privateevent;
 
 import android.app.Dialog;
 import android.app.TimePickerDialog;
@@ -33,6 +33,7 @@ import net.clamour.foodevent.GuestHomeScreen.CompleteHostProfileDetails;
 import net.clamour.foodevent.GuestProfile.GuestLogin;
 import net.clamour.foodevent.GuestProfile.GuestProfileScreen;
 import net.clamour.foodevent.R;
+import net.clamour.foodevent.booking.ConfirmBooking;
 import net.clamour.foodevent.guestsearch.EventFilterScreen;
 
 import java.text.DateFormat;
@@ -44,8 +45,8 @@ import butterknife.ButterKnife;
 
 import static net.clamour.foodevent.guestsearch.EventFilterScreen.selected_date_st;
 
-public class GuestBooking extends AppCompatActivity {
-  //  @BindView(R.id.edit_address)TextView Edit_address;
+public class PrivateEventBookingPage extends AppCompatActivity {
+    //  @BindView(R.id.edit_address)TextView Edit_address;
     @BindView(R.id.calender_icon)ImageView calender_icon;
     @BindView(R.id.request_book)Button request_book;
     @BindView(R.id.event_nmae_booking)TextView event_name;
@@ -62,20 +63,20 @@ public class GuestBooking extends AppCompatActivity {
 
     AlertDialog alertDialog;
 
-   public static TextView date_text;
-   public static TextView guest_total;
-public static  String currentdate;
+    public static TextView date_text_payinf;
+    public static TextView guest_total;
+    public static  String currentdate;
 
 
     public static TextView selected_date_text;
     int minteger = 0;
-    public static String date_selected;
+    public static String date_selected_paying;
     String selected_datee;
 
-   // EditText txtDate, txtTime;
+    // EditText txtDate, txtTime;
     private int mYear, mMonth, mDay, mHour, mMinute;
 
-    private static final DateFormat FORMATTER = SimpleDateFormat.getDateInstance();
+    private static  DateFormat FORMATTER = SimpleDateFormat.getDateInstance();
     public static String selected_date_st;
     String Event_name,host_image_url,price_per_guest,host_auth_id,service_id,cateogry_name,guest_no_st,TotalFareStr,SelectedEventDate;
     public static SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
@@ -88,17 +89,17 @@ public static  String currentdate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_guest_booking);
+        setContentView(R.layout.activity_private_event_booking_page);
         ButterKnife.bind(this);
 
 
 
-         currentdate = df.format(Calendar.getInstance().getTime());
+        currentdate = df.format(Calendar.getInstance().getTime());
 
         Log.i("cureentdate",currentdate.toString());
 
 
-        date_text=(TextView)findViewById(R.id.select_date_) ;
+        date_text_payinf=(TextView)findViewById(R.id.select_date_) ;
         guest_total=(TextView)findViewById(R.id.guest_total);
 
         Intent intent=getIntent();
@@ -117,7 +118,7 @@ public static  String currentdate;
 
         event_name.setText(Event_name);
         price_perguest_text.setText("CAD "+price_per_guest);
-        Glide.with(GuestBooking.this).load(host_image_url)
+        Glide.with(PrivateEventBookingPage.this).load(host_image_url)
                 .thumbnail(0.5f)
                 .crossFade()
                 .placeholder(0)
@@ -210,20 +211,20 @@ public static  String currentdate;
 //                else {
 //                Log.i("selectddddate",date_selected);
 
-                     Intent intent = new Intent(GuestBooking.this, ConfirmBooking.class);
+                Intent intent = new Intent(PrivateEventBookingPage.this, ConfirmBooking.class);
 
-                     intent.putExtra("host_auth_id", host_auth_id);
-                     intent.putExtra("service_id", service_id);
-                     intent.putExtra("cateogry", cateogry_name);
-                     intent.putExtra("event_price", price_per_guest);
-                     intent.putExtra("event_name", Event_name);
-                     intent.putExtra("total_no_guest", guest_total.getText().toString().trim());
-                     intent.putExtra("eventdate", date_selected);
-                     intent.putExtra("totalpayableamount", Totalfare.getText().toString().trim());
-                     intent.putExtra("bookingtime",select_time.getText().toString());
-                     intent.putExtra("priceperguest",price_per_guest);
-                     startActivity(intent);
-             //   }
+                intent.putExtra("host_auth_id", host_auth_id);
+                intent.putExtra("service_id", service_id);
+                intent.putExtra("cateogry", cateogry_name);
+                intent.putExtra("event_price", price_per_guest);
+                intent.putExtra("event_name", Event_name);
+                intent.putExtra("total_no_guest", guest_total.getText().toString().trim());
+                intent.putExtra("eventdate", date_selected_paying);
+                intent.putExtra("totalpayableamount", Totalfare.getText().toString().trim());
+                intent.putExtra("bookingtime",select_time.getText().toString());
+                intent.putExtra("priceperguest",price_per_guest);
+                startActivity(intent);
+                //   }
 
 //                else {
 //                }
@@ -279,7 +280,7 @@ public static  String currentdate;
     private void display(int number) {
 
         guest_count.setText("" + number);
-         guest_no_st=guest_count.getText().toString();
+        guest_no_st=guest_count.getText().toString();
         Log.i("guest_no",guest_no_st);
 
         int totalguestcount=Integer.valueOf(guest_no_st);
@@ -297,7 +298,7 @@ public static  String currentdate;
 
     }
     public void calenderClick(){
-        new net.clamour.foodevent.booking.GuestBooking.SimpleCalendarDialogFragment().show(getSupportFragmentManager(), "test-simple-calendar");
+        new net.clamour.foodevent.privateevent.PrivateEventBookingPage.SimpleCalendarDialogFragment().show(getSupportFragmentManager(), "test-simple-calendar");
     }
 
     public static class SimpleDialogFragment extends AppCompatDialogFragment {
@@ -315,7 +316,7 @@ public static  String currentdate;
 
     public static class SimpleCalendarDialogFragment extends AppCompatDialogFragment implements OnDateSelectedListener {
 
-        private TextView textView1;
+        private TextView textView;
 
         @NonNull
         @Override
@@ -325,9 +326,9 @@ public static  String currentdate;
 
             //inflate custom layout and get views
             //pass null as parent view because will be in dialog layout
-            View view = inflater.inflate(R.layout.dialog_basic, null);
+            View view = inflater.inflate(R.layout.dialogbasic1, null);
 
-            textView1 = (TextView) view.findViewById(R.id.textView);
+            textView = (TextView) view.findViewById(R.id.textView_paying);
 
             MaterialCalendarView widget = (MaterialCalendarView) view.findViewById(R.id.calendarView);
 
@@ -345,39 +346,39 @@ public static  String currentdate;
 
             if(Calendar.getInstance().getTime().after(date.getDate()))
             {
-               // Toast.makeText(getContext(),"agdsah",Toast.LENGTH_LONG).show();
+                // Toast.makeText(getContext(),"agdsah",Toast.LENGTH_LONG).show();
 
 
                 final android.app.AlertDialog alertDialog = new android.app.AlertDialog.Builder(
-                                    getContext()).create();
+                        getContext()).create();
 
-                            // Setting Dialog Title
-                            alertDialog.setTitle("                 Alert!");
+                // Setting Dialog Title
+                alertDialog.setTitle("                 Alert!");
 
-                            // Setting Dialog Message
-                            alertDialog.setMessage("   Past Date Can't be Selected");
+                // Setting Dialog Message
+                alertDialog.setMessage("   Past Date Can't be Selected");
 
-                            // Setting Icon to Dialog
+                // Setting Icon to Dialog
 
 
-                            // Setting OK Button
-                            alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
+                // Setting OK Button
+                alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
 //                                    Intent intent = new Intent(Intent.ACTION_MAIN);
 //                                    intent.addCategory(Intent.CATEGORY_APP_EMAIL);
 //                                    startActivity(intent);
-                                    // Write your code here to execute after dialog closed
-                                    // alertDialog.dismiss();
-                                    // Toast.makeText(getApplicationContext(), "You clicked on OK", Toast.LENGTH_LONG).show();
+                        // Write your code here to execute after dialog closed
+                        // alertDialog.dismiss();
+                        // Toast.makeText(getApplicationContext(), "You clicked on OK", Toast.LENGTH_LONG).show();
 
-                                    // verifyEmail();
-                                    // saveData();
+                        // verifyEmail();
+                        // saveData();
 
-                                }
-                            });
+                    }
+                });
 
-                            // Showing Alert Message
-                            alertDialog.show();
+                // Showing Alert Message
+                alertDialog.show();
 
 
 
@@ -385,10 +386,10 @@ public static  String currentdate;
 
             }
 
-            textView1.setText(FORMATTER.format(date.getDate()));
-            date_selected=textView1.getText().toString();
-            Log.i("date_string",date_selected);
-            date_text.setText(date_selected);
+            textView.setText(FORMATTER.format(date.getDate()));
+            date_selected_paying=textView.getText().toString();
+            Log.i("date_string",date_selected_paying);
+            date_text_payinf.setText(date_selected_paying);
 
 //            if(date_selected.isEmpty()){
 //
@@ -403,31 +404,31 @@ public static  String currentdate;
         }
 
     }
-public void openTimePickerDialog(){
-    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    public void openTimePickerDialog(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
 
 
-    LayoutInflater inflater = LayoutInflater.from(
-            GuestBooking.this);
+        LayoutInflater inflater = LayoutInflater.from(
+                PrivateEventBookingPage.this);
 
 
-    View subView = inflater.inflate(R.layout.timepickerdialog, null);
-    builder.setView(subView);
-    alertDialog = builder.create();
+        View subView = inflater.inflate(R.layout.timepickerdialog, null);
+        builder.setView(subView);
+        alertDialog = builder.create();
 
-    timePicker1 = (TimePicker)subView.findViewById(R.id.timePicker1);
-    time = (TextView)subView.findViewById(R.id.textView1);
-    calendar = Calendar.getInstance();
+        timePicker1 = (TimePicker)subView.findViewById(R.id.timePicker1);
+        time = (TextView)subView.findViewById(R.id.textView1);
+        calendar = Calendar.getInstance();
 
-    int hour = calendar.get(Calendar.HOUR_OF_DAY);
-    int min = calendar.get(Calendar.MINUTE);
-    showTime(hour, min);
-
-
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        int min = calendar.get(Calendar.MINUTE);
+        showTime(hour, min);
 
 
-    alertDialog.show();}
+
+
+        alertDialog.show();}
 
     public void setTime(View view) {
         int hour = timePicker1.getCurrentHour();
@@ -459,4 +460,3 @@ public void openTimePickerDialog(){
 
 
 }
-

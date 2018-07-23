@@ -1,5 +1,6 @@
 package net.clamour.foodevent.GuestProfile;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -7,6 +8,7 @@ import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -47,6 +49,8 @@ import com.google.android.gms.tasks.Task;
 import net.clamour.foodevent.GuestHomeScreen.GuestHomeScreen;
 import net.clamour.foodevent.HostProfile.HostHomeScreen;
 import net.clamour.foodevent.R;
+import net.clamour.foodevent.guestsearch.PermissionUtils;
+import net.clamour.foodevent.guestsearch.SearchActivity;
 import net.clamour.foodevent.hostsidebar.HostProfile;
 import net.clamour.foodevent.webservice.ApiClient;
 import net.clamour.foodevent.webservice.ApiInterface;
@@ -57,14 +61,17 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 
-public class GuestLogin extends AppCompatActivity {
+public class GuestLogin extends AppCompatActivity implements ActivityCompat.OnRequestPermissionsResultCallback,
+        PermissionUtils.PermissionResultCallback {
 
     @BindView(R.id.signup_guest)Button login_guest;
     @BindView(R.id.signup_text)TextView signup_text;
@@ -75,6 +82,11 @@ public class GuestLogin extends AppCompatActivity {
 
     @BindView(R.id.face_book_button)Button Facebook_button;
     @BindView(R.id.gmail_button)Button Gmail_button;
+
+    ArrayList<String> permissions = new ArrayList<>();
+    PermissionUtils permissionUtils;
+
+    boolean isPermissionGranted;
 
     private CallbackManager callbackManager ;
     ProgressDialog pDialog;
@@ -117,6 +129,13 @@ public class GuestLogin extends AppCompatActivity {
         ButterKnife.bind(this);
 
 
+        permissionUtils = new PermissionUtils(GuestLogin.this);
+        permissions.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        permissions.add(Manifest.permission.READ_EXTERNAL_STORAGE);
+        permissions.add(Manifest.permission.CAMERA);
+
+
+        permissionUtils.check_permission(permissions, "Need GPS permission for getting your location and Write External Storage permission allows us to do store documents", 1);
 
 
         Facebook_button=(Button)findViewById(R.id.face_book_button);
@@ -816,6 +835,7 @@ else {
                             Log.i("outh_id",oth_id);
                             email_get=jsonObject1.getString("email");
                             Log.i("email_get",email_get);
+                            user_mode=jsonObject1.getString("usertype");
 
 
 
@@ -986,7 +1006,7 @@ else {
                     public void onResponse(String response) {
                         //Toast.makeText(JobDetails.this, response, Toast.LENGTH_LONG).show();
 
-                        Log.i("responseloginfacebook", response);
+                        Log.i("responselogingmail", response);
 
 
 
@@ -1019,7 +1039,7 @@ else {
                                 Log.i("outh_id",oth_id);
                                 email_get=jsonObject1.getString("email");
                                 Log.i("email_get",email_get);
-//                                user_mode=jsonObject.getString("usertype");
+                                user_mode=jsonObject1.getString("usertype");
                                 //error_code=jsonObject.getString("errorcode");
                                 //  Log.i("errorcode",error_code);
 
@@ -1176,5 +1196,39 @@ else {
 
 
     }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+        // redirects to utils
+        permissionUtils.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+    }
+
+
+    @Override
+    public void PermissionGranted(int request_code) {
+
+        isPermissionGranted = true;
+    }
+
+    @Override
+    public void PartialPermissionGranted(int request_code, ArrayList<String> granted_permissions) {
+
+        isPermissionGranted = false;
+    }
+
+    @Override
+    public void PermissionDenied(int request_code) {
+
+        isPermissionGranted = false;
+    }
+
+    @Override
+    public void NeverAskAgain(int request_code) {
+
+        isPermissionGranted = false;
+    }
+
 }
 

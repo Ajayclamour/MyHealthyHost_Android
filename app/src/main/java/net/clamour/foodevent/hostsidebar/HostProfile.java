@@ -5,6 +5,7 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -21,6 +22,7 @@ import android.net.Uri;
 import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
@@ -133,7 +135,7 @@ public class HostProfile extends DrawerHostBaseActivity  {
     private static final String TAG = "MainActivity";
     SharedPreferences preferences;
 
-    String gender[] = {"Select Gender","Male","Female","TransGender"};
+    String gender[] = {"Male","Female","Others"};
     String agegroup[]={"18-25","25-30","30-40","40-50","50-above"};
     String service[]={"Social Dining","Tiffin Delivery","Catering","Private Events"};
 
@@ -187,11 +189,12 @@ public class HostProfile extends DrawerHostBaseActivity  {
         MultiSelectionSpinner serv_spin=(MultiSelectionSpinner)findViewById(R.id.service_spinner);
         MultiSelectionSpinner language_spin=(MultiSelectionSpinner)findViewById(R.id.language_spinner_host);
         ccp = (CountryCodePicker) findViewById(R.id.ccp);
-        ccp.setCountryForPhoneCode(+1);
+        //ccp.setCountryForPhoneCode(+1);
+        ccp.setCountryForNameCode("CA");
 
         ccp_alternate=(CountryCodePicker)findViewById(R.id.ccp_alternate);
         countrycode=ccp.getSelectedCountryCode();
-        ccp.setCountryForPhoneCode(+1);
+        ccp_alternate.setCountryForNameCode("CA");
         Log.i("codeee",ccp.getSelectedCountryCode()+""+ccp.getDefaultCountryCodeWithPlus());
         alternatePhoneCode=ccp_alternate.getSelectedCountryCode();
 
@@ -513,7 +516,8 @@ public class HostProfile extends DrawerHostBaseActivity  {
         caputre_gallery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loadImagebyGallery();
+               // loadImagebyGallery();
+                selectImage();
             }
         });
 
@@ -529,6 +533,59 @@ public class HostProfile extends DrawerHostBaseActivity  {
 
 
     }
+
+    public void selectImage(){
+
+        final CharSequence[] options = { "Take Photo", "Choose from Gallery","Cancel" };
+
+
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(HostProfile.this);
+
+        builder.setTitle("Add Photo!");
+
+        builder.setItems(options, new DialogInterface.OnClickListener() {
+
+            @Override
+
+            public void onClick(DialogInterface dialog, int item) {
+
+                if (options[item].equals("Take Photo"))
+
+                {
+
+                    Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                    startActivityForResult(intent, 1 );
+                }
+
+                else if (options[item].equals("Choose from Gallery"))
+
+                {
+
+                    Intent intent = new Intent();
+                    intent.setType("image/*");
+                    intent.setAction(Intent.ACTION_GET_CONTENT);
+                    startActivityForResult(Intent.createChooser(intent, "Select Picture"), 2);
+
+
+
+                }
+
+                else if (options[item].equals("Cancel")) {
+
+                    dialog.dismiss();
+
+                }
+
+            }
+
+        });
+
+        builder.show();
+
+
+    }
+
 
     public void ShowCountryData(){
         pDialog = new ProgressDialog(HostProfile.this);
@@ -771,8 +828,24 @@ public class HostProfile extends DrawerHostBaseActivity  {
     }
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == RESULT_OK) {
-            if (requestCode == SELECT_PICTURE) {
-                // Get the url from data
+            if (requestCode == 1) {
+
+                Bundle extras = data.getExtras();
+                bitmap = (Bitmap) extras.get("data");
+
+                profile_imagel.setImageBitmap(bitmap);
+
+                // CALL THIS METHOD TO GET THE URI FROM THE BITMAP
+                Uri tempUri = getImageUri(getApplicationContext(), bitmap);
+
+                // CALL THIS METHOD TO GET THE ACTUAL PATH
+                Toast.makeText(HostProfile.this,"Here "+ getRealPathFromURI(tempUri),Toast.LENGTH_LONG).show();
+            }
+
+
+            else if (requestCode == 2) {
+
+
                 selectedImageUri = data.getData();
                 if (null != selectedImageUri) {
                     // Get the path from the Uri
@@ -794,15 +867,10 @@ public class HostProfile extends DrawerHostBaseActivity  {
 
                     } catch (IOException e) {
                         e.printStackTrace();
-                    }
+                    }}}
 
-//                    SharedPreferences.Editor editor = preferences.edit();
-//                    editor.putString("image", String.valueOf(selectedImageUri));
-//                    editor.commit();
-                }
-            }
-        }
-    }
+
+        }}
 
     /* Get the real path from the URI */
     public String getPathFromURI(Uri contentUri) {
@@ -893,7 +961,7 @@ public class HostProfile extends DrawerHostBaseActivity  {
                 }
                 if((isSucess==true)) {
 
-
+                    pDialog.cancel();
                     //     saveUpdatedProfileData();
 
                     final android.app.AlertDialog alertDialog = new android.app.AlertDialog.Builder(
@@ -927,7 +995,7 @@ public class HostProfile extends DrawerHostBaseActivity  {
 //                            Intent browserIntent = new Intent(Intent.ACTION_VIEW);
 //                            browserIntent.setData(Uri.parse("http://myhealthyhost.com/dashboard.php"));
 //                            startActivity(browserIntent);
-                            //alertDialog.dismiss();
+                            alertDialog.dismiss();
                         }
                     });
 
@@ -1250,5 +1318,20 @@ public class HostProfile extends DrawerHostBaseActivity  {
     protected void onResume() {
         super.onResume();
 
+    }
+
+
+    public Uri getImageUri(Context inContext, Bitmap inImage) {
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+        String path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null);
+        return Uri.parse(path);
+    }
+
+    public String getRealPathFromURI(Uri uri) {
+        Cursor cursor = getContentResolver().query(uri, null, null, null, null);
+        cursor.moveToFirst();
+        int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+        return cursor.getString(idx);
     }
 }

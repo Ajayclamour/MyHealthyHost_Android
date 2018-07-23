@@ -290,7 +290,7 @@ else {
         req_book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Privateevent_Description.this, GuestBooking.class);
+                Intent intent=new Intent(Privateevent_Description.this, PrivateEventBookingPage.class);
                 intent.putExtra("host_image_url",hostimage_st);
                 intent.putExtra("event_price",price_st);
                 intent.putExtra("event_name",service_title_st);

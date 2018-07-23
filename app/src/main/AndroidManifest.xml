@@ -24,8 +24,8 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality.
     -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.MICROPHONE" />
     <uses-permission android:name="android.permission.ACCESS_GPS" />
@@ -33,7 +33,12 @@
     <uses-permission android:name="android.permission.ACCESS_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+
+
 
     <permission
         android:name="net.clamour.foodevent.permission.MAPS_RECEIVE"
@@ -247,7 +252,8 @@
         <activity android:name=".booking.ViewMoreMenudetails" />
         <activity android:name=".HostProfile.TermsHost" />
         <activity android:name=".GuestHomeScreen.ViewMoreHostProfile" />
-        <activity android:name=".catering.ViewMoreDescription"></activity>
+        <activity android:name=".catering.ViewMoreDescription" />
+        <activity android:name=".privateevent.PrivateEventBookingPage"></activity>
     </application>
 
 </manifest>
